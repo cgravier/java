@@ -55,6 +55,10 @@ on Linux/Unix platforms, `windows` on Windows platforms.
   `'6'`.
 * `node['java']['java_home']` - Default location of the
   "`$JAVA_HOME`".
+* `node['java']['curl_operation_timeout']` - Maximum global operation time 
+  in seconds for fetching a java jdk online. Given an  oracle JDK 
+  is ~100Mb, this can  take up to ~30 minutes using xDSL for instance, which 
+  is higher than the default Sehllout CommandTimeout.
 * `node['java']['openjdk_packages']` - Array of OpenJDK package names
   to install in the `java::openjdk` recipe. This is set based on the
   platform.

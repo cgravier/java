@@ -25,6 +25,8 @@ default['java']['install_flavor'] = "openjdk"
 default['java']['jdk_version'] = '6'
 default['java']['arch'] = kernel['machine'] =~ /x86_64/ ? "x86_64" : "i586"
 default['java']['openjdk_packages'] = []
+default['java']['download_timeout'] = 300
+
 
 case node['platform_family']
 when "rhel", "fedora"
