@@ -70,7 +70,7 @@ def download_direct_from_oracle(tarball_name, new_resource)
     converge_by(description) do
        Chef::Log.debug "downloading oracle tarball straight from the source"
        cmd = shell_out(
-                                  %Q[ curl -L --cookie "#{cookie}" #{new_resource.url} -o #{download_path} ] , :timeout => #{tout}
+                                  %Q[ curl -L --cookie "#{cookie}" #{new_resource.url} -o #{download_path} ] , :timeout => 5
                                )
        cmd.run_command
        cmd.error!
